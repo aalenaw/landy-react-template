@@ -49,30 +49,16 @@ const ContentBlock = ({
             <ContentWrapper>
               <h6>{t(title)}</h6>
               <Content>{t(content)}</Content>
-              {direction === "right" ? (
+              {direction === "right" && typeof button === "object" && button.length > 0 && (
                 <ButtonWrapper>
-                  {typeof button === "object" &&
-                    button.map(
-                      (
-                        item: {
-                          color?: string;
-                          title: string;
-                        },
-                        id: number
-                      ) => {
-                        return (
-                          <Button
-                            key={id}
-                            color={item.color}
-                            onClick={() => scrollTo("about")}
-                          >
-                            {t(item.title)}
-                          </Button>
-                        );
-                      }
-                    )}
+                  <Button
+      color={button[0].color}
+      onClick={() => scrollTo("about")}
+    >
+      {t(button[0].title)}
+    </Button>
                 </ButtonWrapper>
-              ) : (
+              ) } 
                 <ServiceWrapper>
                   <Row justify="space-between">
                     {typeof section === "object" &&
@@ -100,7 +86,7 @@ const ContentBlock = ({
                       )}
                   </Row>
                 </ServiceWrapper>
-              )}
+              
             </ContentWrapper>
           </Col>
         </StyledRow>

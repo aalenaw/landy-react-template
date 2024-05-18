@@ -20,7 +20,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   return (
     <ContactContainer id={id}>
-<Row gutter={[16, 16]}>       
+<Row gutter={[50, 40]}>       
  <Col lg={12} md={11} sm={24} xs={24}>
           <Slide direction="left" triggerOnce>
           <FormGroup autoComplete="off" onSubmit={handleSubmit}>
@@ -154,7 +154,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               <Col span={24}>
                 <Input
                   type="text"
-                  name="Vehicle CLaim"
+                  name="Vehicle Claim"
                   placeholder="Enter numerical value only"
                   value={values.email || ""}
                   onChange={handleChange}
