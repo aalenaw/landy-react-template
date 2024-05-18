@@ -29,17 +29,17 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="Policy Deductible"
-                  placeholder="Enter full dollar and cents amount"
-                  value={values.email || ""}
+                  placeholder="Enter full amount ($)"
+                  value={values.message || ""}
                   onChange={handleChange}
                 />
-                <ValidationType type="email" />
+                <ValidationType type="message" />
               </Col>
               <Col span={24}>
                 <Input
                   type="text"
                   name="Policy Annual Premium"
-                  placeholder="Enter full dollar and cent amount"
+                  placeholder="Enter full amount ($)"
                   value={values.email || ""}
                   onChange={handleChange}
                 />
@@ -59,7 +59,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="Incident Type"
-                  placeholder="Single Vehicle Collision, Multiple Vehicle Collision etc."
+                  placeholder="Single Vehicle Collision, Multiple Vehicle Collision, etc."
                   value={values.email || ""}
                   onChange={handleChange}
                 />
@@ -69,7 +69,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="Collision Type"
-                  placeholder="Side, Rear, Front"
+                  placeholder="Side, Rear, or Front"
                   value={values.email || ""}
                   onChange={handleChange}
                 />
@@ -105,7 +105,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="Authorities Contacted"
-                  placeholder="Ambulance, Fire etc."
+                  placeholder="Ambulance, Fire, etc."
                   value={values.email || ""}
                   onChange={handleChange}
                 />
@@ -115,7 +115,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="Police Report Available"
-                  placeholder="Yes, No, N/A"
+                  placeholder="Yes, No, or n/a"
                   value={values.email || ""}
                   onChange={handleChange}
                 />
@@ -125,7 +125,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="Total Claim Amount"
-                  placeholder="Enter full dollar and cent amount"
+                  placeholder="Enter full amount ($)"
                   value={values.email || ""}
                   onChange={handleChange}
                 />
@@ -135,7 +135,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="Injury Claim"
-                  placeholder="Your Email"
+                  placeholder="Enter amount ($)"
                   value={values.email || ""}
                   onChange={handleChange}
                 />
@@ -145,7 +145,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="Property Claim"
-                  placeholder="Enter numerical value only"
+                  placeholder="Enter amount ($)"
                   value={values.email || ""}
                   onChange={handleChange}
                 />
@@ -155,7 +155,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="Vehicle Claim"
-                  placeholder="Enter numerical value only"
+                  placeholder="Enter amount ($)"
                   value={values.email || ""}
                   onChange={handleChange}
                 />

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContactContainer = styled("div")`
-  padding: 0rem 0;
+  padding: 0 0 5rem 0;
 
   @media only screen and (max-width: 1024px) {
     padding: 3rem 0;
@@ -29,8 +29,9 @@ export const Span = styled("span")`
 export const ButtonContainer = styled("div")`
   text-align: end;
   position: relative;
+  marigin-top: 2rem;
 
   @media only screen and (max-width: 414px) {
-    padding-top: 1.75rem;
+    padding-top: 0.75rem;
   }
 `;
