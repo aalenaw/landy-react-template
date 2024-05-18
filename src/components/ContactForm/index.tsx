@@ -20,10 +20,82 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   return (
     <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
-        <Col lg={12} md={11} sm={24} xs={24}>
+<Row gutter={[16, 16]}>       
+ <Col lg={12} md={11} sm={24} xs={24}>
           <Slide direction="left" triggerOnce>
-            <Block title={title} content={content} />
+          <FormGroup autoComplete="off" onSubmit={handleSubmit}>
+
+          <Col span={24}>
+                <Input
+                  type="text"
+                  name="Policy Deductible"
+                  placeholder="Enter full dollar and cents amount"
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="Policy Annual Premium"
+                  placeholder="Enter full dollar and cent amount"
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="Incident Date"
+                  placeholder="DD/MM/YYYY"
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="Incident Type"
+                  placeholder="Single Vehicle Collision, Multiple Vehicle Collision etc."
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="Collision Type"
+                  placeholder="Side, Rear, Front"
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="Incident Severity"
+                  placeholder="Major, Minor, Total, or Trivial"
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="Number of Vehicles Involved"
+                  placeholder="Enter Number"
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="email" />
+              </Col>
+              </FormGroup>
           </Slide>
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
@@ -32,9 +104,9 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               <Col span={24}>
                 <Input
                   type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={values.name || ""}
+                  name="Authorities Contacted"
+                  placeholder="Ambulance, Fire etc."
+                  value={values.email || ""}
                   onChange={handleChange}
                 />
                 <ValidationType type="name" />
@@ -42,7 +114,27 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               <Col span={24}>
                 <Input
                   type="text"
-                  name="email"
+                  name="Police Report Available"
+                  placeholder="Yes, No, N/A"
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="Total Claim Amount"
+                  placeholder="Enter full dollar and cent amount"
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="Injury Claim"
                   placeholder="Your Email"
                   value={values.email || ""}
                   onChange={handleChange}
@@ -50,14 +142,26 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="email" />
               </Col>
               <Col span={24}>
-                <TextArea
-                  placeholder="Your Message"
-                  value={values.message || ""}
-                  name="message"
+                <Input
+                  type="text"
+                  name="Property Claim"
+                  placeholder="Enter numerical value only"
+                  value={values.email || ""}
                   onChange={handleChange}
                 />
-                <ValidationType type="message" />
+                <ValidationType type="email" />
               </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="Vehicle CLaim"
+                  placeholder="Enter numerical value only"
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="email" />
+              </Col>
+             
               <ButtonContainer>
                 <Button name="submit">{t("Submit")}</Button>
               </ButtonContainer>
